@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#888"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.zsm.pocketlamb.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutController"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:background="#888" >
+
+        <ImageView
+            android:id="@+id/imageViewTorch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/flashlight_on" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal" >
+
+	        <ImageView
+	            android:id="@+id/imageViewSos"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="onSos"
+	            android:src="@drawable/sos" />
+	
+	        <ImageView
+	            android:id="@+id/imageViewLight"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="onLight"
+	            android:src="@drawable/light" />
+	
+	        <ImageView
+	            android:id="@+id/imageViewOff"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="onOff"
+	            android:src="@drawable/power_off" />
+	
+	        <ImageView
+	            android:id="@+id/imageViewAlarm"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:onClick="onFlash"
+	            android:src="@drawable/alarm" />
+
+	    </LinearLayout>
+	    <LinearLayout
+	        android:id="@+id/layoutText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentStart="true"
+	        android:orientation="horizontal" >
+
+	        <EditText
+	            android:id="@+id/editText"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:layout_gravity="center_vertical" >
+
+	            <requestFocus />
+	        </EditText>
+
+	        <ImageView
+	            android:id="@+id/imageViewSend"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:onClick="onSendMessage"
+	            android:src="@drawable/send_message" />
+
+	        <CheckBox
+	            android:id="@+id/checkBoxRepeat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/labelRepeatly" />
+
+        </LinearLayout>
+   	</LinearLayout>
+    
+</RelativeLayout>

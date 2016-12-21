@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PocketLamb</string>
+    <string name="action_settings">Settings</string>
+    <string name="alertFlashFailed">Cannot initialize for flash!</string>
+    <string name="alertNothingToFlash">Nothing to be flashed!</string>
+    <string name="labelRepeatly">repeatly</string>
+    <string name="accessCameraNotGranted">The permission to light the light is not granted. The app will exist.</string>
+
+</resources>
